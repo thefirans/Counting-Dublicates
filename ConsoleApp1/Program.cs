@@ -12,8 +12,7 @@ namespace ConsoleApp1
     {
         public static int DuplicateCount(string str)
         {
-            str = str.ToLower();
-            var result = str.Replace(" ", "").GroupBy(_ => _).Where(x => x.Count() > 1).Select(x => x.Key);
+            var result = str.ToLower().Replace(" ", "").GroupBy(_ => _).Where(x => x.Count() > 1).Select(x => x.Key);
             return result.Count();    
         }
     }
